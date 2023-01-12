@@ -8,6 +8,7 @@ await page.goto("https://en.wikipedia.org/wiki/Web_scraping");
 
 headings = await page.evaluate(()=> {
     headings_elements = document.querySelectorAll("#mw-content-text div.mw-parser-output p");
+    return headings_elements.
     headings_array = Array.from(headings_elements);
     return headings_array.map(heading => heading.textContent);
 });
